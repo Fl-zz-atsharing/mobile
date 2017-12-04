@@ -1,4 +1,11 @@
 import { AppRegistry } from 'react-native'
-import App from './App'
+import { DrawerNavigator } from 'react-navigation'
+import HomeScreen from './views/home.js'
 
-AppRegistry.registerComponent('Coloc', () => App)
+const RootDrawer = DrawerNavigator({
+  Home: {
+    screen: HomeScreen
+  }
+})
+
+AppRegistry.registerComponent('Coloc', () => RootDrawer)
