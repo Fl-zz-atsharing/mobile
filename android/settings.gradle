@@ -1,0 +1,3 @@
+rootProject.name = 'Coloc'
+
+include ':app'
