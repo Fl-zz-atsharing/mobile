@@ -3,15 +3,14 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-        "prepare-repository": "npm i -g react-native-cli yarn;yarn install; react- native link",
-        "emulator": "/home/alex/Android/Sdk/tools/emulator -avd Nexus_5X_API_23 -use-system-libs",
-        "install": "react-native run-android",
-        "start": "react-native start --reset-cache",
-        "android": "npm run install && npm run start",
-        "react-devtools": "react-devtools",
-        "android-devtools": "adb shell input keyevent 82",
-        "clean": "npm cache clean --force && cd android && ./gradlew clean && cd ..",
-        "test": "jest"
+		"prepare-repository": "npm i -g react-native-cli;npm  install; react-native link",
+		"android:emulator": "`which emulator` -avd Nexus_5X_API_23 -use-system-libs &",
+		"android:install": "react-native run-android",
+		"android:devtools": "adb shell input keyevent 82",
+		"run-android": "npm run android:install && npm run start",
+		"start": "react-native run-android",
+		"clean": "npm cache clean --force && cd android && ./gradlew clean && cd ..",
+		"react-devtools": "react-devtools"
 	},
 	"dependencies": {
 		"add": "^2.0.6",
